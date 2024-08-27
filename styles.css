@@ -1,0 +1,183 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1aa5dcb6;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column; /* Cambiado para columna por defecto en móvil */
+    width: 90%;
+    max-width: 1200px;
+    background-color: #fffffff6;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.container-left {
+    width: 100%; /* Cambiado a 100% para móvil */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.container-right {
+    width: 100%; /* Cambiado a 100% para móvil */
+    background-color: #1aa5dc;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0; /* Eliminado el borde redondeado por defecto */
+    margin-top: 20px; /* Añadido margen superior para separación en móvil */
+}
+
+.text-input, .controls {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.text-input textarea {
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #d9e2ec;
+    border-radius: 10px;
+    resize: none;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Permite que los botones se ajusten en pantallas pequeñas */
+}
+
+.controls button {
+    width: 100%; /* Cambiado a 100% por defecto */
+    max-width: 140px; /* Mantener el ancho máximo */
+    padding: 10px;
+    margin: 10px 0; /* Ajustado para móvil */
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.controls button.encriptar {
+    background-color: #1f77d0;
+    color: white;
+}
+
+.controls button.desencriptar {
+    background-color: #d9e2ec;
+    color: #333;
+}
+
+.controls button.resetear {
+    background-color: #2dbe5d;
+    color: white;
+}
+
+.container-right img {
+    width: 80%;
+    max-width: 200px;
+    margin-bottom: 20px;
+}
+
+.container-right h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.container-right p {
+    font-size: 14px;
+    color: #fafafa;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.container-right textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #d9e2ec;
+    border-radius: 10px;
+    resize: none;
+    background-color: #f0f4f8;
+    display: none; 
+}
+
+.container-right .buttons {
+    display: flex;
+    gap: 10px; /* Espacio entre botones */
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.container-right button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.container-right button.copiar {
+    background-color: #1f77d0;
+    color: white;
+    display: none; 
+}
+
+.container-right button.resetear {
+    background-color: #2dbe5d;
+    color: white;
+    display: none; 
+}
+
+.warning {
+    color: #d9534f;
+    font-size: 14px;
+    margin-top: 5px;
+    display: none; /* Se mostrará solo si hay un error */
+}
+
+/* Media Queries para diferentes dispositivos */
+@media (min-width: 769px) {
+    .main-container {
+        flex-direction: row; /* Layout en fila para tablet y más grande */
+    }
+
+    .container-left {
+        width: 60%; /* Ajuste de ancho para tablet */
+        padding: 40px;
+    }
+
+    .container-right {
+        width: 40%; /* Ajuste de ancho para tablet */
+        padding: 40px;
+        border-radius: 0 15px 15px 0; /* Bordes redondeados en el lado derecho */
+        margin-top: 0; /* Remover margen en tablet y más grande */
+    }
+}
+
+@media (min-width: 1440px) {
+    .container-left {
+        width: 80%; /* Ancho original para escritorio */
+    }
+
+    .container-right {
+        width: 60%; /* Ancho original para escritorio */
+    }
+}
+
