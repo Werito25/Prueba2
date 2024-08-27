@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de Texto</title><img src="logo.png" alt="No message found image">
+    <link rel="stylesheet" href="styles.css">
+    <style type="text/css">
+<!--
+.Estilo1 {
+	font-family: "Times New Roman", Times, serif;
+	font-weight: bold;
+	font-size: small;
+}
+.Estilo2 {font-family: "Courier New", Courier, monospace}
+-->
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <!-- Columna izquierda -->
+        <div class="container-left">
+            <div class="text-input">
+                <h1 class="Estilo2">Encriptador de Texto</h1>
+                <textarea id="inputText" placeholder="Ingrese su texto... "></textarea>
+                <p id="warning" class="warning">Solo se permiten letras minúsculas sin acentos.</p>
+            </div>
+            <div class="controls">
+                <p class="Estilo1">Solo se permiten letras minúsculas sin acentos.</p>
+                <button class="encriptar" onClick="encriptar()">Encriptar</button>
+                <button class="desencriptar" onClick="desencriptar()">Desencriptar</button>
+            </div>
+        </div>
+
+        <!-- Columna derecha -->
+        <div class="container-right">
+    <div class="text-output">
+        <div align="center"><img src="candado.jpg" alt="Imagen de resultado vacío" name="placeholderImage" id="placeholderImage"></div>
+        <p id="instructionText">Ingresa el texto que desees encriptar o desencriptar.</p> <!-- Texto que ocultaremos -->
+        <textarea id="outputText" placeholder="El resultado aparecerá aquí..." readonly></textarea>
+        <div class="buttons">
+            <button id="copyButton" class="copiar" onClick="copiarTexto()">Copiar</button>
+            <button id="resetButton" class="resetear" onClick="resetear()">Resetear</button>
+        </div>
+    </div>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
